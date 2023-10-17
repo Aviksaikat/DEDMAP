@@ -1,16 +1,19 @@
 #!/usr/local/bin/python3.7
 #!/usr/bin/env python3
 
+import getopt
+import logging as log
+import socket
 #IMPORTING REQUIRED LIBRARIES
 from datetime import datetime
+from os import path, popen, remove
+from subprocess import call
+from sys import argv, platform
 from time import time
+
+from colorama import Fore, init
 from funcy import flatten
 from numpy import array
-from sys import argv, platform
-from colorama import init, Fore
-from os import popen, path, remove
-from subprocess import call
-import socket, getopt, logging as log
 
 try:
 	#SETTING UP A COLOR SCHEME FOR BETTER VISUALIZATION
@@ -57,7 +60,8 @@ try:
 			print(f'\n{RED}Can\'t remove the temp.log file. Remove it manually before next use.{RESET}')
 
 	#DEFINED A HELP FUNCTION TO OUTPUT USAGE INSTRUCTIONS
-	def help(): print(GREEN + """
+	def help(): 
+		print(GREEN + """
 DEDMAP ( https://7Ragnarok7.github.io/DEDMAP )
 
 Usage: dedmap [--option(s)] [target(s)]
@@ -119,7 +123,7 @@ Examples:               dedmap 1.1.1.1
 		print(YELLOW, live_targets, RESET)
 	
 	
-	#DESIGNED A FUNTION TO GIVE PRIORITY TO LONG-FORMAT ARGUMENTS
+	#DESIGNED A FUNCTION TO GIVE PRIORITY TO LONG-FORMAT ARGUMENTS
 	def priority():
 		for item in POSSIBLE_OPTIONS:
 			if item in options and POSSIBLE_OPTIONS[item] in options: 
@@ -349,4 +353,5 @@ except getopt.GetoptError:
 		exit(f"\n{RED}Option -o requires an argument{RESET}\n")
 	else: 
 		exit(f"\n{RED}Argument Value Missing/Option Not Valid!{RESET}\n")
-else: out()
+else: 
+	out()

@@ -13,7 +13,7 @@ Both TCP and UDP protocols have 0 to 65535 ports. These 65535 ports can be divid
  
  - Dynamic or private ports: from 49151 to 65535 
 
-**DEDMAP** tries to scan a target IP or range of IP's and find services that are running and listening on some ports.
+**DEDMAP** tries to scan a target IP or range of IP"s and find services that are running and listening on some ports.
 
 **DEDMAP** can also scan a range of hosts to find live hosts.
 
@@ -87,7 +87,7 @@ $ ./uninstall.sh
 
  - Supports Verbose mode
 
- - Supports Saving the Output to a file. (The file generated is a ***dedmap file***. cat/type it to view it's contents properly in a shell environment)
+ - Supports Saving the Output to a file. (The file generated is a ***dedmap file***. cat/type it to view it"s contents properly in a shell environment)
 
  - Supports various port specification options
 
@@ -139,7 +139,7 @@ $ dedmap [--option(s)] [target(s)]
  
  - -t, --tcp              perform a TCP scan (default scan if NO OPTIONS are specified)
 
- - -u, --udp              perform a UDP scan (Doesn't seems to work as of now using the socket in python)
+ - -u, --udp              perform a UDP scan (Doesn"t seems to work as of now using the socket in python)
 
  - -n, --net              perform a network scan
 
@@ -172,7 +172,7 @@ $ dedmap -nt 1.1.1.0-255 (To scan only the hosts which are alive in the network)
 $ dedmap -o report 127.0.0.1
 ```
 ### Additional Notice :-
- - The output file generated is a ***dedmap file***. Cat/Print it to view it's contents properly in a shell environment.
+ - The output file generated is a ***dedmap file***. Cat/Print it to view it"s contents properly in a shell environment.
 
  - This tool is expected to have lots of bugs as it is in a very early stage.
 
@@ -186,7 +186,7 @@ $ dedmap -o report 127.0.0.1
  
  - IS SLOW AS NO MULTI-THREADING CONCEPTS USED IN THE PROGRAM.
  
- - UDP DOESN'T WORKS PROPERLY AS OF NOW.
+ - UDP DOESN"T WORKS PROPERLY AS OF NOW.
 
  - THE USER MUST MAINTAIN A SEQUENCE "dedmap [--option(s)] [target(s)]"
 
